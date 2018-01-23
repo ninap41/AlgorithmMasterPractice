@@ -131,4 +131,85 @@ function greaterThan_Y(){
     }
 
 }
-greaterThan_Y(array,y)
+// greaterThan_Y(array,y)
+
+//square values ///////////////////////////////////////////////////////////////
+
+function squareVal(arr2) {
+    for (var i= 0; i<arr2.length; i++){
+        arr2[i]= arr2[i] * arr2[i];
+    }
+    console.log(arr2); 
+}
+// squareVal(arr2)
+
+//max min avg ///////////////////////////////////////////////////////////////
+
+function maxMinAvg(arr2) {
+    var max = arr2[0];
+    var min = arr2[0];
+    var avg = arr2[0]
+    var sum = 0;
+    for ( var i = 1; i< arr2.length; i++){
+        if (arr2[i] > max){
+            max = arr2[i];
+        }
+        if (arr2[i] < min) {
+            min = arr2[i];
+        }
+        sum = sum + arr2[i];
+    }
+    var avg = Math.floor(sum / arr2.length);
+    var arrnew = [max,min,avg];
+    console.log(arrnew)
+}
+// maxMinAvg(arr2)
+
+// No Neggie ///////////////////////////////////////////////////////////////
+var arrHUH = [-3,10,-10,79]
+function noNeg(arr2) {
+  
+    for(var i = 0; i < arr2.length; i ++){
+        if ( arr2[i] < 0) {
+           arr2[i] = 0;
+        }
+    }
+    console.log(arr2); 
+}
+// noNeg(arrHUH) 
+
+// Shifting numbers in array  ///////////////////////////////////////////////////////////////
+
+var shiftArr = arr2
+function shiftArray(shiftArr){
+    for(var i = 0; i < shiftArr.length; i ++){
+        if(i == shiftArr.length-1){
+            shiftArr[i] = 0
+        }
+        else {
+            shiftArr[i] = shiftArr[i+1]
+        }
+    }
+    console.log(shiftArr)
+}
+// shiftArray(shiftArr);
+
+// number to string ///////////////////////////////////////////////////////////////
+var arrHUH2 = [-3,10,-10,79]
+
+function noNegtoString(arr3) {
+  
+    for(var i = 0; i < arr3.length; i ++){
+        if ( arr3[i] < 0) {
+           arr3[i] = "Dojo";
+        }
+    }
+    console.log(arr3); 
+}
+// noNegtoString(arrHUH2) ;
+
+
+// anotherArr = [35, 15, 3, 39, 53, 93, 25, 39, 59, 21]
+
+// Random Array ///////////////////////////////////////////////////////////////
+
