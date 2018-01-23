@@ -5,6 +5,65 @@
 // ***** MANIPULATION. *******
 
 
+
+// ****Random ARRAY
+// ***** and
+// ***** Reverse Array
+// ***** Use CALLBACK*******
+// Random Array and reverse array///////////////////////////////////////////////////////////////
+
+var newarray = [];
+function randomArr(newarray){
+   
+    for(var i = 0; i <=10; i++){
+        newarray.push(Math.floor(Math.random(1) *100))
+    }
+    console.log(newarray)
+    console.log(reverseArr(newarray))
+}
+
+function reverseArr(arr){
+    reversearr = []
+    for(var i = arr.length -1; i >= 0; i--){
+        reversearr.push(arr[i])
+    }
+    return reversearr;
+}
+
+// one call 
+// randomArr(newarray)
+
+
+
+// ****Random ARRAY
+// ***** and
+// ***** Reverse Array
+// ***** Use CALLBACK*******
+
+
+//////////Insert X in Y ////////////////////////////////////////////////////////////////
+//x is the number
+// y is the index
+InsertArr= [10,50,40,80,70]
+ x = 33
+ y = Math.floor(Math.random(0) * InsertArr.length)
+ //the random index
+ console.log(y)
+ //the value
+ x = 33
+function numberInsert(InsertArr, x, y){
+    for(var i =0; i <InsertArr.length; i++){
+        if(InsertArr[y] == InsertArr[i]){
+            InsertArr.splice(y, 0, x);
+            //splice meaning, y index, 0 deletions, and the x value
+        }
+    }
+    console.log(InsertArr)  
+}
+numberInsert(InsertArr, x, y)
+
+
+
 // print sum between 1-255 ///////////////////////////////////////////////////////////////
 var sum = 0;
 function printSum255_withDivisibleByFive(){
@@ -213,58 +272,3 @@ function noNegtoString(arr3) {
 
 
 
-// ****Random ARRAY
-// ***** and
-// ***** Reverse Array
-// ***** Use CALLBACK*******
-// Random Array and reverse array///////////////////////////////////////////////////////////////
-
-var newarray = [];
-function randomArr(newarray){
-   
-    for(var i = 0; i <=10; i++){
-        newarray.push(Math.floor(Math.random(1) *100))
-    }
-    console.log(newarray)
-    console.log(reverseArr(newarray))
-}
-
-function reverseArr(arr){
-    reversearr = []
-    for(var i = arr.length -1; i >= 0; i--){
-        reversearr.push(arr[i])
-    }
-    return reversearr;
-}
-
-// one call 
-// randomArr(newarray)
-
-
-
-// ****Random ARRAY
-// ***** and
-// ***** Reverse Array
-// ***** Use CALLBACK*******
-
-
-//////////Insert X in Y ////////////////////////////////////////////////////////////////
-//x is the number
-// y is the index
-InsertArr= [10,50,40,80,70]
- x = 33
- y = Math.floor(Math.random(0) * InsertArr.length)
- //the random index
- console.log(y)
- //the value
- x = 33
-function numberInsert(InsertArr, x, y){
-    for(var i =0; i <InsertArr.length; i++){
-        if(InsertArr[y] == InsertArr[i]){
-            InsertArr.splice(y, 0, x);
-            //splice meaning, y index, 0 deletions, and the x value
-        }
-    }
-    console.log(InsertArr)  
-}
-numberInsert(InsertArr, x, y)
