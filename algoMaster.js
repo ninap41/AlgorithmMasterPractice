@@ -211,7 +211,14 @@ function noNegtoString(arr3) {
 
 // anotherArr = [35, 15, 3, 39, 53, 93, 25, 39, 59, 21]
 
-// Random Array ///////////////////////////////////////////////////////////////
+
+
+// ****Random ARRAY
+// ***** and
+// ***** Reverse Array
+// ***** Use CALLBACK*******
+// Random Array and reverse array///////////////////////////////////////////////////////////////
+
 var newarray = [];
 function randomArr(newarray){
    
@@ -219,15 +226,45 @@ function randomArr(newarray){
         newarray.push(Math.floor(Math.random(1) *100))
     }
     console.log(newarray)
+    console.log(reverseArr(newarray))
 }
-randomArr(newarray)
 
-// reverse array  ///////////////////////////////////////////////////////////////
-function reverseArr(newarray){
+function reverseArr(arr){
     reversearr = []
-    for(var i = newarray.length -1; i >= 0; i--){
-        reversearr.push(newarray[i])
+    for(var i = arr.length -1; i >= 0; i--){
+        reversearr.push(arr[i])
     }
-    console.log(reversearr)
+    return reversearr;
 }
-reverseArr(newarray)
+
+// one call 
+// randomArr(newarray)
+
+
+
+// ****Random ARRAY
+// ***** and
+// ***** Reverse Array
+// ***** Use CALLBACK*******
+
+
+//////////Insert X in Y ////////////////////////////////////////////////////////////////
+//x is the number
+// y is the index
+InsertArr= [10,50,40,80,70]
+ x = 33
+ y = Math.floor(Math.random(0) * InsertArr.length)
+ //the random index
+ console.log(y)
+ //the value
+ x = 33
+function numberInsert(InsertArr, x, y){
+    for(var i =0; i <InsertArr.length; i++){
+        if(InsertArr[y] == InsertArr[i]){
+            InsertArr.splice(y, 0, x);
+            //splice meaning, y index, 0 deletions, and the x value
+        }
+    }
+    console.log(InsertArr)  
+}
+numberInsert(InsertArr, x, y)
