@@ -48,9 +48,9 @@ InsertArr= [10,50,40,80,70]
  x = 33
  y = Math.floor(Math.random(0) * InsertArr.length)
  //the random index
- console.log(y)
+//  console.log(y)
  //the value
- x = 33
+//  x = 33
 function numberInsert(InsertArr, x, y){
     for(var i =0; i <InsertArr.length; i++){
         if(InsertArr[y] == InsertArr[i]){
@@ -60,7 +60,7 @@ function numberInsert(InsertArr, x, y){
     }
     console.log(InsertArr)  
 }
-numberInsert(InsertArr, x, y)
+// numberInsert(InsertArr, x, y)
 
 
 
@@ -268,7 +268,36 @@ function noNegtoString(arr3) {
 // noNegtoString(arrHUH2) ;
 
 
-// anotherArr = [35, 15, 3, 39, 53, 93, 25, 39, 59, 21]
+//////////////
+// Remove negative values in an array //////////////////////////////////////////
 
 
+anotherArr = [35, -15, 3, 39, -53, 93, 25, -39, 59, 21]
+//WAY NUMBER 1
+function removeNeg(){
+    for(var i = 0; i <anotherArr.length; i++){
+        if(anotherArr[i] < 0){
+            anotherArr.splice(i, 1)
+        }
+    }
+    console.log(anotherArr)
+}
+removeNeg(anotherArr)
 
+//WAY NUMBER 2
+function removeNegwithoutSplice(){
+    number_of_neggies = 0;
+    for(var i = 0; i <anotherArr.length; i++){
+        if(anotherArr[i] < 0){
+            number_of_neggies++
+        }
+        else{
+            anotherArr[i - number_of_neggies] = anotherArr[i]
+        }
+    }
+    while(number_of_neggies--){
+        anotherArr.pop()
+    }
+    console.log(anotherArr)
+}
+removeNegwithoutSplice(anotherArr)
