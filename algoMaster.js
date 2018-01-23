@@ -212,4 +212,22 @@ function noNegtoString(arr3) {
 // anotherArr = [35, 15, 3, 39, 53, 93, 25, 39, 59, 21]
 
 // Random Array ///////////////////////////////////////////////////////////////
+var newarray = [];
+function randomArr(newarray){
+   
+    for(var i = 0; i <=10; i++){
+        newarray.push(Math.floor(Math.random(1) *100))
+    }
+    console.log(newarray)
+}
+randomArr(newarray)
 
+// reverse array  ///////////////////////////////////////////////////////////////
+function reverseArr(newarray){
+    reversearr = []
+    for(var i = newarray.length -1; i >= 0; i--){
+        reversearr.push(newarray[i])
+    }
+    console.log(reversearr)
+}
+reverseArr(newarray)
